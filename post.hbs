@@ -38,6 +38,21 @@
             <section class="gh-content gh-canvas">
                 {{content}}
             </section>
+            
+            <section class="article-comments gh-canvas">
+                <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+                <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+                <div id="comment-section"></div>
+                <script>
+                    initComments({
+                      node: document.getElementById("comment-section"),
+                      defaultHomeserverUrl: "https://matrix.cactus.chat:8448",
+                      serverName: "cactus.chat",
+                      siteName: "atherantimes.com",
+                      commentSectionId: "{{url}}"
+                    })
+                </script>
+            </section>
         </article>
     {{/post}}
 
